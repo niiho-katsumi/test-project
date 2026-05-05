@@ -1,4 +1,4 @@
-import Tag from "../../atoms/Tag/Tag";
+import Tag from "../atoms/Tag";
 
 type Props = {
   categories: string[];

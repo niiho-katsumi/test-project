@@ -1,8 +1,8 @@
-import type { PostInfo } from "../../../type";
-import Content from "../../atoms/Content/Content";
-import DateText from "../../atoms/DateText/DateText";
-import Title from "../../atoms/Title/Title";
-import TagList from "../TagList/TagList";
+import type { PostInfo } from "../../type";
+import Content from "../atoms/Content";
+import DateText from "../atoms/DateText";
+import Title from "../atoms/Title";
+import TagList from "./TagList";
 
 type Props = {
   PostInfo: PostInfo;

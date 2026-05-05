@@ -1,4 +1,5 @@
-import TextLink from "../../atoms/TextLink/TextLink";
+import TextLink from "../atoms/TextLink";
+
 
 export default function Header() {
   return (
