@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import type { PostInfo } from "../../type";
 import Content from "../atoms/Content";
 import DateText from "../atoms/DateText";
@@ -12,7 +13,7 @@ export default function Article({ PostInfo }: Props) {
   const { id, title, categories, createdAt, content } = PostInfo;
   return (
     <li className="flex flex-col m-0 p-0 list-none">
-      <a href={`/posts/${id}`}>
+      <Link to={`/posts/${id}`}>
         <div className="border border-[#ccc] border-solid p-4 mb-8">
           <div className="flex justify-between">
             <DateText createdAt={createdAt} />
@@ -21,7 +22,7 @@ export default function Article({ PostInfo }: Props) {
           <Title title={title} />
           <Content>{content}</Content>
         </div>
-      </a>
+      </Link>
     </li>
   );
 }
