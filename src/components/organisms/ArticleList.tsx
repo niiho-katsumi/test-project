@@ -10,6 +10,7 @@ export default function ArticleList({ articles }: Props) {
     <ul>
       {articles.map((article) => (
         <Article
+          key={article.id}
           PostInfo={{
             id: article.id,
             title: article.title,
