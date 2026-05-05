@@ -1,4 +1,3 @@
-import "../../../index.css";
 import TextLink from "../../atoms/TextLink/TextLink";
 
 export default function Header() {

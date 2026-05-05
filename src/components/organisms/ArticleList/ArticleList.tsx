@@ -1,4 +1,3 @@
-import "../../../index.css";
 import type { PostInfo } from "../../../type";
 import Article from "../../molecules/Article/Article";
 

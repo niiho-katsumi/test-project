@@ -1,5 +1,4 @@
 import { Link } from "react-router-dom";
-import "../../../index.css";
 
 type Props = {
   text: string;

@@ -1,4 +1,3 @@
-import "../../../index.css";
 import type { PostInfo } from "../../../type";
 import Content from "../../atoms/Content/Content";
 import DateText from "../../atoms/DateText/DateText";

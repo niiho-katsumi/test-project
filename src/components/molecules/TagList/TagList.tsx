@@ -1,4 +1,3 @@
-import "../../../index.css";
 import Tag from "../../atoms/Tag/Tag";
 
 type Props = {

@@ -1,5 +1,4 @@
 import Header from "../../components/organisms/Header/Header";
-import "../../index.css";
 
 type Props = {
   children: React.ReactNode;
