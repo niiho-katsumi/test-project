@@ -1,4 +1,4 @@
-import Header from "../organisms/Header/Header";
+import Header from "../../components/organisms/Header/Header";
 import "../../index.css";
 
 type Props = {

@@ -1,12 +1,12 @@
 import { posts } from "../../../data/posts";
-import Layout from "../../Layout/Layout";
+import Layout from "../../../layouts/Layout/Layout";
 import ArticleList from "../../organisms/ArticleList/ArticleList";
 import "../../../index.css";
 
 export default function Home() {
   return (
     <>
-      <Layout >
+      <Layout>
         <ArticleList articles={posts} />
       </Layout>
     </>

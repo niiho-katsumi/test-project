@@ -1,4 +1,4 @@
-import Layout from "../../Layout/Layout";
+import Layout from "../../../layouts/Layout/Layout";
 import "../../../index.css";
 
 export default function ArticleDetail() {
