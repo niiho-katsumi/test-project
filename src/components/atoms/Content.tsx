@@ -1,10 +1,13 @@
 type Props = {
   children: React.ReactNode;
+  omission: boolean;
 };
 
-export default function Content({ children }: Props) {
+export default function Content({ children, omission }: Props) {
   return (
-    <div className="text-[1rem] leading-normal line-clamp-3 whitespace-pre-wrap">
+    <div
+      className={`text-[1rem] leading-normal whitespace-pre-wrap ${omission ? "line-clamp-3" : ""}`}
+    >
       {children}
     </div>
   );
