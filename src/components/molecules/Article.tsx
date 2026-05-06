@@ -1,0 +1,28 @@
+import { Link } from "react-router-dom";
+import type { PostInfo } from "../../type";
+import Content from "../atoms/Content";
+import DateText from "../atoms/DateText";
+import Title from "../atoms/Title";
+import TagList from "./TagList";
+
+type Props = {
+  PostInfo: PostInfo;
+};
+
+export default function Article({ PostInfo }: Props) {
+  const { id, title, categories, createdAt, content } = PostInfo;
+  return (
+    <li className="flex flex-col m-0 p-0 list-none">
+      <Link to={`/posts/${id}`}>
+        <div className="border border-[#ccc] border-solid p-4 mb-8">
+          <div className="flex justify-between">
+            <DateText createdAt={createdAt} />
+            <TagList categories={categories} />
+          </div>
+          <Title title={title} />
+          <Content>{content}</Content>
+        </div>
+      </Link>
+    </li>
+  );
+}
