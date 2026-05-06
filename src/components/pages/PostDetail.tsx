@@ -23,17 +23,13 @@ export default function PostDetail() {
     fetcher();
   }, []);
 
+  if (isLoading) return <p>読み込み中...</p>;
+
+  if (!post) return <p>記事が見つかりません</p>;
+
   return (
     <>
-      <Layout>
-        {isLoading ? (
-          <p>読み込み中...</p>
-        ) : !post ? (
-          <p>記事が見つかりません</p>
-        ) : (
-          <PostDetailList post={post} omission={false} outline={false} />
-        )}
-      </Layout>
+      <PostDetailList post={post} omission={false} outline={false} />
     </>
   );
 }

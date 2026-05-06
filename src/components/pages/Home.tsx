@@ -20,17 +20,13 @@ export default function Home() {
     fetcher();
   }, []);
 
+  if (isLoading) return <p>読み込み中...</p>;
+
+  if (!posts) return <p>記事が見つかりません</p>;
+
   return (
     <>
-      <Layout>
-        {isLoading ? (
-          <p>読み込み中...</p>
-        ) : !posts ? (
-          <p>記事が見つかりません</p>
-        ) : (
-          <PostList posts={posts} omission={true} outline={true} />
-        )}
-      </Layout>
+      <PostList posts={posts} omission={true} outline={true} />
     </>
   );
 }
