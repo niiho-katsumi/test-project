@@ -13,7 +13,7 @@ type Props = {
   outline: boolean;
 };
 
-export default function ArticleItem({
+export default function PostItem({
   createdAt,
   categories,
   title,

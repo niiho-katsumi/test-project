@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import type { PostInfo } from "../../type";
-import ArticleItem from "../organisms/ArticleItem";
+import PostItem from "../organisms/PostItem";
 
 type Props = {
   PostInfo: PostInfo;
@@ -8,12 +8,12 @@ type Props = {
   outline: boolean;
 };
 
-export default function Article({ PostInfo, omission, outline }: Props) {
+export default function Post({ PostInfo, omission, outline }: Props) {
   const { id, title, categories, createdAt, content } = PostInfo;
   return (
     <li className="flex flex-col m-0 p-0 list-none">
       <Link to={`/posts/${id}`}>
-        <ArticleItem
+        <PostItem
           createdAt={createdAt}
           categories={categories}
           title={title}
