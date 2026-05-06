@@ -10,7 +10,7 @@ export default function PostDetail() {
   const { id } = useParams<{ id: string }>();
 
   useEffect(() => {
-    const fetcher = async () => {
+    const fetcher = async (): Promise<void> => {
       const res = await fetch(
         `https://1hmfpsvto6.execute-api.ap-northeast-1.amazonaws.com/dev/posts/${id}`,
       );
