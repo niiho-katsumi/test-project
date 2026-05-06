@@ -3,9 +3,11 @@ import Article from "../molecules/Article";
 
 type Props = {
   articles: PostInfo[];
+  omission: boolean;
+  outline: boolean;
 };
 
-export default function ArticleList({ articles }: Props) {
+export default function ArticleList({ articles, omission, outline }: Props) {
   return (
     <ul>
       {articles.map((article) => (
@@ -19,6 +21,8 @@ export default function ArticleList({ articles }: Props) {
             categories: article.categories,
             content: article.content,
           }}
+          omission={omission}
+          outline={outline}
         />
       ))}
     </ul>

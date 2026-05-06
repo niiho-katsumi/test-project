@@ -6,7 +6,7 @@ export default function Home() {
   return (
     <>
       <Layout>
-        <ArticleList articles={posts} />
+        <ArticleList articles={posts} omission={true} outline={true} />
       </Layout>
     </>
   );
