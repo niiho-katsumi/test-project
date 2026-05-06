@@ -6,7 +6,7 @@ import { posts } from "../../data/posts";
 export default function PostDetail() {
   const { id } = useParams<{ id: string }>();
   const filteredPost = posts.find((post) => post.id === Number(id));
-  if (!filteredPost) return;
+  if (!filteredPost) return <p>記事が見つかりません</p>;
   return (
     <>
       <Layout>
