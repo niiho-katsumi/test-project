@@ -1,5 +1,4 @@
 import { useEffect, useState } from "react";
-import Layout from "../../layouts/Layout";
 import PostList from "../organisms/PostList";
 import type { PostInfo } from "../../type";
 
