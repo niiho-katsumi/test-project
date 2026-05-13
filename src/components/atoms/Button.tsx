@@ -1,28 +1,23 @@
+import type { ComponentProps } from "react";
+
+type Variant = "default" | "secondary";
+
 type Props = {
-  type: "submit" | "button";
-  BackGroudColor: "gray" | "paleGray";
-  textColor: "black" | "white";
-  onClick?: () => void;
-  disabled: boolean;
+  variant: Variant;
   isSubmitting: boolean;
   text: string;
-};
+} & ComponentProps<"button">;
 
 export default function Button({
-  type,
-  BackGroudColor,
-  textColor,
-  onClick,
-  disabled,
+  variant,
   isSubmitting,
   text,
+  ...buttonProps
 }: Props) {
   return (
     <button
-      type={type}
-      className={`${BackGroudColor === "gray" ? "bg-gray-800" : "bg-gray-200"} ${textColor === "black" ? "text-black" : "text-white"} font-bold py-2 px-4 rounded-lg`}
-      onClick={onClick}
-      disabled={disabled}
+      className={`${variant === "default" ? "bg-gray-800 text-white" : "bg-gray-200 text-black"} font-bold py-2 px-4 rounded-lg`}
+      {...buttonProps}
     >
       {isSubmitting ? "送信中" : `${text}`}
     </button>
