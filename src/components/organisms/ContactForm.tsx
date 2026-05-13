@@ -26,7 +26,6 @@ export default function ContactForm({ onSubmit }: Props) {
 
   const onSubmitWithReset = async (data: contactSchemaType) => {
     await onSubmit(data);
-    console.log(errors);
     reset();
   };
 
@@ -61,16 +60,14 @@ export default function ContactForm({ onSubmit }: Props) {
         <div className="flex justify-center mt-10 gap-4">
           <Button
             type={"submit"}
-            BackGroudColor={"gray"}
-            textColor={"white"}
+            variant={"default"}
             disabled={isSubmitting}
             isSubmitting={isSubmitting}
             text={"送信"}
           />
           <Button
             type={"button"}
-            BackGroudColor={"paleGray"}
-            textColor={"black"}
+            variant={"secondary"}
             onClick={() => reset()}
             disabled={isSubmitting}
             isSubmitting={isSubmitting}
