@@ -1,5 +1,4 @@
 import { useParams } from "react-router-dom";
-import Layout from "../../layouts/Layout";
 import PostDetailList from "../organisms/PostDetailList";
 import { useEffect, useState } from "react";
 import type { PostInfo } from "../../type";
