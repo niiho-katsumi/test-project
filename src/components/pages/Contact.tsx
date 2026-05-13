@@ -13,10 +13,11 @@ export default function Contact() {
         },
       );
 
-      alert("送信しました");
       if (!res.ok) throw new Error(`httpエラー:${res.status}`);
+      
+      alert("送信しました");
     } catch (error) {
-      throw error;
+      console.error(error);
     }
   };
 
